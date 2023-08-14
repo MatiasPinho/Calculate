@@ -14,9 +14,22 @@ const btnSuma = document.getElementById("suma");
 const sumaPlus = document.getElementById("sumaPlus");
 const num2 = document.getElementById("num2");
 const borrar = document.querySelector(".borrar");
-const btnSeven2 = document.getElementById("prueba")
-const btnMultiplicar = document.getElementById("multiplicar")
-const multiplicarPlus = document.getElementById("multiplicarPlus")
+const btnSeven2 = document.getElementById("newSeven");
+const btnEight2 = document.getElementById("newEight");
+const btnNine2 = document.getElementById("newNine");
+const btnFour2 = document.getElementById("newFour");
+const btnFive2 = document.getElementById("newFive");
+const btnSix2 = document.getElementById("newSix");
+const btnOne2 = document.getElementById("newOne");
+const btnTwo2 = document.getElementById("newTwo");
+const btnThree2 = document.getElementById("newThree");
+const btnZero2 = document.getElementById("newZero");
+const btnMultiplicar = document.getElementById("multiplicar");
+const multiplicarPlus = document.getElementById("multiplicarPlus");
+const btnDividir = document.getElementById("dividir");
+const dividirPlus = document.getElementById("dividirPlus");
+const btnRestar = document.getElementById("restar")
+const restarPlus = document.getElementById("restarPlus")
 
 //usar map
 
@@ -44,7 +57,9 @@ btnTwo.addEventListener("click", añadirPTwo);
 btnThree.addEventListener("click", añadirPThree);
 btnZero.addEventListener("click", añadirPZero);
 btnSuma.addEventListener("click", showAddition);
-btnMultiplicar.addEventListener("click",showMultiplicar)
+btnMultiplicar.addEventListener("click", showMultiplicar);
+btnDividir.addEventListener("click",showDividir)
+btnRestar.addEventListener("click",showRestar)
 
 //cuando el usuario clickee, se creara un P con el numero, que se guardo anteriormente en una variable
 function añadirPSeven() {
@@ -88,12 +103,54 @@ function añadirPZero() {
   num1.appendChild(numberText);
 }
 
- function añadirPSevenTwo(){
+function añadirPSevenTwo() {
   const numberText = document.createTextNode("7");
   num2.appendChild(numberText);
- }
+}
 
+function añadirPEightTwo() {
+  const numberText = document.createTextNode("8");
+  num2.appendChild(numberText);
+}
 
+function añadirPNineTwo() {
+  const numberText = document.createTextNode("9");
+  num2.appendChild(numberText);
+}
+
+function añadirPFiveTwo() {
+  const numberText = document.createTextNode("5");
+  num2.appendChild(numberText);
+}
+
+function añadirPSixTwo() {
+  const numberText = document.createTextNode("6");
+  num2.appendChild(numberText);
+}
+
+function añadirPFourTwo() {
+  const numberText = document.createTextNode("4");
+  num2.appendChild(numberText);
+}
+
+function añadirPThreeTwo() {
+  const numberText = document.createTextNode("3");
+  num2.appendChild(numberText);
+}
+
+function añadirPTwoTwo() {
+  const numberText = document.createTextNode("2");
+  num2.appendChild(numberText);
+}
+function añadirPOneTwo() {
+  const numberText = document.createTextNode("1");
+  num2.appendChild(numberText);
+}
+
+function añadirPZeroTwo() {
+  const numberText = document.createTextNode("0");
+  num2.appendChild(numberText);
+}
 
 function showAddition() {
   // const showSumaDisplay = btnSuma.textContent
@@ -112,12 +169,19 @@ function showAddition() {
   btnTwo.removeEventListener("click", añadirPTwo);
   btnThree.removeEventListener("click", añadirPThree);
   btnZero.removeEventListener("click", añadirPSeven);
-  btnSeven2.addEventListener("click",añadirPSevenTwo)
-
-
+  btnSeven2.addEventListener("click", añadirPSevenTwo);
+  btnEight2.addEventListener("click", añadirPEightTwo);
+  btnNine2.addEventListener("click", añadirPNineTwo);
+  btnFour2.addEventListener("click", añadirPFourTwo);
+  btnFive2.addEventListener("click", añadirPFiveTwo);
+  btnSix2.addEventListener("click", añadirPSixTwo);
+  btnOne2.addEventListener("click", añadirPOneTwo);
+  btnTwo2.addEventListener("click", añadirPTwoTwo);
+  btnThree2.addEventListener("click", añadirPThreeTwo);
+  btnZero2.addEventListener("click", añadirPZeroTwo);
 }
 
-function showMultiplicar(){
+function showMultiplicar() {
   numOperator.appendChild(btnMultiplicar);
   const duplicar = btnMultiplicar.cloneNode(true);
   multiplicarPlus.appendChild(duplicar);
@@ -131,7 +195,71 @@ function showMultiplicar(){
   btnTwo.removeEventListener("click", añadirPTwo);
   btnThree.removeEventListener("click", añadirPThree);
   btnZero.removeEventListener("click", añadirPSeven);
-  btnSeven2.addEventListener("click",añadirPSevenTwo)
-
+  btnSeven2.addEventListener("click", añadirPSevenTwo);
+  btnEight2.addEventListener("click", añadirPEightTwo);
+  btnNine2.addEventListener("click", añadirPNineTwo);
+  btnFour2.addEventListener("click", añadirPFourTwo);
+  btnFive2.addEventListener("click", añadirPFiveTwo);
+  btnSix2.addEventListener("click", añadirPSixTwo);
+  btnOne2.addEventListener("click", añadirPOneTwo);
+  btnTwo2.addEventListener("click", añadirPTwoTwo);
+  btnThree2.addEventListener("click", añadirPThreeTwo);
+  btnZero2.addEventListener("click", añadirPZeroTwo);
 }
 
+function showDividir() {
+  numOperator.appendChild(btnDividir);
+  const duplicar = btnMultiplicar.cloneNode(true);
+  dividirPlus.appendChild(duplicar);
+  btnSeven.removeEventListener("click", añadirPSeven);
+  btnEight.removeEventListener("click", añadirPEight);
+  btnNine.removeEventListener("click", añadirPNine);
+  btnFour.removeEventListener("click", añadirPFour);
+  btnFive.removeEventListener("click", añadirPFive);
+  btnSix.removeEventListener("click", añadirPSix);
+  btnOne.removeEventListener("click", añadirPOne);
+  btnTwo.removeEventListener("click", añadirPTwo);
+  btnThree.removeEventListener("click", añadirPThree);
+  btnZero.removeEventListener("click", añadirPSeven);
+  btnSeven2.addEventListener("click", añadirPSevenTwo);
+  btnEight2.addEventListener("click", añadirPEightTwo);
+  btnNine2.addEventListener("click", añadirPNineTwo);
+  btnFour2.addEventListener("click", añadirPFourTwo);
+  btnFive2.addEventListener("click", añadirPFiveTwo);
+  btnSix2.addEventListener("click", añadirPSixTwo);
+  btnOne2.addEventListener("click", añadirPOneTwo);
+  btnTwo2.addEventListener("click", añadirPTwoTwo);
+  btnThree2.addEventListener("click", añadirPThreeTwo);
+  btnZero2.addEventListener("click", añadirPZeroTwo);
+}
+
+function showRestar(){
+  numOperator.appendChild(btnRestar);
+  const duplicar = btnDividir.cloneNode(true);
+  dividirPlus.appendChild(duplicar);
+  btnSeven.removeEventListener("click", añadirPSeven);
+  btnEight.removeEventListener("click", añadirPEight);
+  btnNine.removeEventListener("click", añadirPNine);
+  btnFour.removeEventListener("click", añadirPFour);
+  btnFive.removeEventListener("click", añadirPFive);
+  btnSix.removeEventListener("click", añadirPSix);
+  btnOne.removeEventListener("click", añadirPOne);
+  btnTwo.removeEventListener("click", añadirPTwo);
+  btnThree.removeEventListener("click", añadirPThree);
+  btnZero.removeEventListener("click", añadirPSeven);
+  btnSeven2.addEventListener("click", añadirPSevenTwo);
+  btnEight2.addEventListener("click", añadirPEightTwo);
+  btnNine2.addEventListener("click", añadirPNineTwo);
+  btnFour2.addEventListener("click", añadirPFourTwo);
+  btnFive2.addEventListener("click", añadirPFiveTwo);
+  btnSix2.addEventListener("click", añadirPSixTwo);
+  btnOne2.addEventListener("click", añadirPOneTwo);
+  btnTwo2.addEventListener("click", añadirPTwoTwo);
+  btnThree2.addEventListener("click", añadirPThreeTwo);
+  btnZero2.addEventListener("click", añadirPZeroTwo);
+}
+
+
+function resultado(){
+  
+}
