@@ -1,18 +1,22 @@
-const btnSeven = document.getElementById("btnSeven");
-const btnEight = document.getElementById("btnEight");
-const btnNine = document.getElementById("btnNine");
-const btnFour = document.getElementById("btnFour");
-const btnFive = document.getElementById("btnFive");
-const btnSix = document.getElementById("btnSix");
-const btnOne = document.getElementById("btnOne");
-const btnTwo = document.getElementById("btnTwo");
-const btnThree = document.getElementById("btnThree");
-const btnZero = document.getElementById("btnZero");
+const btnSeven = document.querySelector(".btnSeven");
+const btnEight = document.querySelector(".btnEight");
+const btnNine = document.querySelector(".btnNine");
+const btnFour = document.querySelector(".btnFour");
+const btnFive = document.querySelector(".btnFive");
+const btnSix = document.querySelector(".btnSix");
+const btnOne = document.querySelector(".btnOne");
+const btnTwo = document.querySelector(".btnTwo");
+const btnThree = document.querySelector(".btnThree");
+const btnZero = document.querySelector(".btnZero");
 const rectangleResult = document.querySelector(".rectangleResult");
 const num1 = document.getElementById("num1");
 const btnSuma = document.getElementById("suma");
 const sumaPlus = document.getElementById("sumaPlus");
 const num2 = document.getElementById("num2");
+const borrar = document.querySelector(".borrar");
+const btnSeven2 = document.getElementById("prueba")
+const btnMultiplicar = document.getElementById("multiplicar")
+const multiplicarPlus = document.getElementById("multiplicarPlus")
 
 //usar map
 
@@ -40,6 +44,7 @@ btnTwo.addEventListener("click", añadirPTwo);
 btnThree.addEventListener("click", añadirPThree);
 btnZero.addEventListener("click", añadirPZero);
 btnSuma.addEventListener("click", showAddition);
+btnMultiplicar.addEventListener("click",showMultiplicar)
 
 //cuando el usuario clickee, se creara un P con el numero, que se guardo anteriormente en una variable
 function añadirPSeven() {
@@ -83,13 +88,50 @@ function añadirPZero() {
   num1.appendChild(numberText);
 }
 
+ function añadirPSevenTwo(){
+  const numberText = document.createTextNode("7");
+  num2.appendChild(numberText);
+ }
+
+
+
 function showAddition() {
   // const showSumaDisplay = btnSuma.textContent
   // console.log(showSumaDisplay)
   numOperator.appendChild(btnSuma);
   const duplicar = btnSuma.cloneNode(true);
   sumaPlus.appendChild(duplicar);
- 
+
+  btnSeven.removeEventListener("click", añadirPSeven);
+  btnEight.removeEventListener("click", añadirPEight);
+  btnNine.removeEventListener("click", añadirPNine);
+  btnFour.removeEventListener("click", añadirPFour);
+  btnFive.removeEventListener("click", añadirPFive);
+  btnSix.removeEventListener("click", añadirPSix);
+  btnOne.removeEventListener("click", añadirPOne);
+  btnTwo.removeEventListener("click", añadirPTwo);
+  btnThree.removeEventListener("click", añadirPThree);
+  btnZero.removeEventListener("click", añadirPSeven);
+  btnSeven2.addEventListener("click",añadirPSevenTwo)
+
+
+}
+
+function showMultiplicar(){
+  numOperator.appendChild(btnMultiplicar);
+  const duplicar = btnMultiplicar.cloneNode(true);
+  multiplicarPlus.appendChild(duplicar);
+  btnSeven.removeEventListener("click", añadirPSeven);
+  btnEight.removeEventListener("click", añadirPEight);
+  btnNine.removeEventListener("click", añadirPNine);
+  btnFour.removeEventListener("click", añadirPFour);
+  btnFive.removeEventListener("click", añadirPFive);
+  btnSix.removeEventListener("click", añadirPSix);
+  btnOne.removeEventListener("click", añadirPOne);
+  btnTwo.removeEventListener("click", añadirPTwo);
+  btnThree.removeEventListener("click", añadirPThree);
+  btnZero.removeEventListener("click", añadirPSeven);
+  btnSeven2.addEventListener("click",añadirPSevenTwo)
 
 }
 
