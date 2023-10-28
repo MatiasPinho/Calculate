@@ -28,8 +28,36 @@ const btnMultiplicar = document.getElementById("multiplicar");
 const multiplicarPlus = document.getElementById("multiplicarPlus");
 const btnDividir = document.getElementById("dividir");
 const dividirPlus = document.getElementById("dividirPlus");
-const btnRestar = document.getElementById("restar")
-const restarPlus = document.getElementById("restarPlus")
+const btnRestar = document.getElementById("restar");
+const restarPlus = document.getElementById("restarPlus");
+const btnResult = document.getElementById("result");
+const btnResultPLus = document.getElementById("resultPlus");
+const btnC = document.getElementById("botonC");
+
+function numeroAOperar1() {
+  let numero1String = num1.innerText;
+  let numero1Number = parseInt(numero1String);
+  let numero2String = num2.innerText;
+  let numero2Number = parseInt(numero2String);
+  let numeroOperador = numOperator.innerText;
+  if (numeroOperador === "+") {
+    num2.textContent = "";
+    num1.textContent = numero1Number + numero2Number;
+    numOperator.textContent = "";
+  } else if (numeroOperador === "-") {
+    num2.textContent = "";
+    num1.textContent = numero1Number - numero2Number;
+    numOperator.textContent = "";
+  } else if (numeroOperador === "*") {
+    num2.textContent = "";
+    num1.textContent = numero1Number * numero2Number;
+    numOperator.textContent = "";
+  } else {
+    num2.textContent = "";
+    num1.textContent = numero1Number / numero2Number;
+    numOperator.textContent = "";
+  }
+}
 
 //usar map
 
@@ -58,10 +86,42 @@ btnThree.addEventListener("click", añadirPThree);
 btnZero.addEventListener("click", añadirPZero);
 btnSuma.addEventListener("click", showAddition);
 btnMultiplicar.addEventListener("click", showMultiplicar);
-btnDividir.addEventListener("click",showDividir)
-btnRestar.addEventListener("click",showRestar)
+btnDividir.addEventListener("click", showDividir);
+btnRestar.addEventListener("click", showRestar);
+btnResult.addEventListener("click", numeroAOperar1);
+btnC.addEventListener("click", deteleDisplayText);
 
-//cuando el usuario clickee, se creara un P con el numero, que se guardo anteriormente en una variable
+function deteleDisplayText() {
+  num1.textContent = "";
+  num2.textContent = "";
+  numOperator.textContent = "";
+  btnSeven2.removeEventListener("click", añadirPSevenTwo);
+  btnEight2.removeEventListener("click", añadirPEightTwo);
+  btnNine2.removeEventListener("click", añadirPNineTwo);
+  btnFour2.removeEventListener("click", añadirPFourTwo);
+  btnFive2.removeEventListener("click", añadirPFiveTwo);
+  btnSix2.removeEventListener("click", añadirPSixTwo);
+  btnOne2.removeEventListener("click", añadirPOneTwo);
+  btnTwo2.removeEventListener("click", añadirPTwoTwo);
+  btnThree2.removeEventListener("click", añadirPThreeTwo);
+  btnZero2.removeEventListener("click", añadirPZeroTwo);
+
+  btnSeven.addEventListener("click", añadirPSeven);
+  btnEight.addEventListener("click", añadirPEight);
+  btnNine.addEventListener("click", añadirPNine);
+  btnFour.addEventListener("click", añadirPFour);
+  btnFive.addEventListener("click", añadirPFive);
+  btnSix.addEventListener("click", añadirPSix);
+  btnOne.addEventListener("click", añadirPOne);
+  btnTwo.addEventListener("click", añadirPTwo);
+  btnThree.addEventListener("click", añadirPThree);
+  btnZero.addEventListener("click", añadirPZero);
+  btnSuma.addEventListener("click", showAddition);
+  btnMultiplicar.addEventListener("click", showMultiplicar);
+  btnDividir.addEventListener("click", showDividir);
+  btnRestar.addEventListener("click", showRestar);
+}
+
 function añadirPSeven() {
   const numberText = document.createTextNode("7");
   num1.appendChild(numberText);
@@ -153,12 +213,9 @@ function añadirPZeroTwo() {
 }
 
 function showAddition() {
-  // const showSumaDisplay = btnSuma.textContent
-  // console.log(showSumaDisplay)
-  numOperator.appendChild(btnSuma);
-  const duplicar = btnSuma.cloneNode(true);
-  sumaPlus.appendChild(duplicar);
-
+  const numberText = document.createTextNode("+");
+  numOperator.appendChild(numberText);
+  btnSuma.removeEventListener("click", showAddition);
   btnSeven.removeEventListener("click", añadirPSeven);
   btnEight.removeEventListener("click", añadirPEight);
   btnNine.removeEventListener("click", añadirPNine);
@@ -168,7 +225,7 @@ function showAddition() {
   btnOne.removeEventListener("click", añadirPOne);
   btnTwo.removeEventListener("click", añadirPTwo);
   btnThree.removeEventListener("click", añadirPThree);
-  btnZero.removeEventListener("click", añadirPSeven);
+  btnZero.removeEventListener("click", añadirPZero);
   btnSeven2.addEventListener("click", añadirPSevenTwo);
   btnEight2.addEventListener("click", añadirPEightTwo);
   btnNine2.addEventListener("click", añadirPNineTwo);
@@ -182,9 +239,9 @@ function showAddition() {
 }
 
 function showMultiplicar() {
-  numOperator.appendChild(btnMultiplicar);
-  const duplicar = btnMultiplicar.cloneNode(true);
-  multiplicarPlus.appendChild(duplicar);
+  const numberText = document.createTextNode("*");
+  numOperator.appendChild(numberText);
+  btnMultiplicar.removeEventListener("click", showMultiplicar);
   btnSeven.removeEventListener("click", añadirPSeven);
   btnEight.removeEventListener("click", añadirPEight);
   btnNine.removeEventListener("click", añadirPNine);
@@ -208,9 +265,9 @@ function showMultiplicar() {
 }
 
 function showDividir() {
-  numOperator.appendChild(btnDividir);
-  const duplicar = btnMultiplicar.cloneNode(true);
-  dividirPlus.appendChild(duplicar);
+  const numberText = document.createTextNode("/");
+  numOperator.appendChild(numberText);
+  btnDividir.removeEventListener("click", showDividir);
   btnSeven.removeEventListener("click", añadirPSeven);
   btnEight.removeEventListener("click", añadirPEight);
   btnNine.removeEventListener("click", añadirPNine);
@@ -233,10 +290,10 @@ function showDividir() {
   btnZero2.addEventListener("click", añadirPZeroTwo);
 }
 
-function showRestar(){
-  numOperator.appendChild(btnRestar);
-  const duplicar = btnDividir.cloneNode(true);
-  dividirPlus.appendChild(duplicar);
+function showRestar() {
+  const numberText = document.createTextNode("-");
+  numOperator.appendChild(numberText);
+  btnRestar.removeEventListener("click", showRestar);
   btnSeven.removeEventListener("click", añadirPSeven);
   btnEight.removeEventListener("click", añadirPEight);
   btnNine.removeEventListener("click", añadirPNine);
@@ -259,7 +316,4 @@ function showRestar(){
   btnZero2.addEventListener("click", añadirPZeroTwo);
 }
 
-
-function resultado(){
-  
-}
+function resultado() {}

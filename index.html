@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Calculadora</title>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
@@ -11,7 +11,7 @@
       <div class="box">
         <div class="rectangleResultContainer">
           <div class="rectangleResult">
-            <p id="num1"></p>
+            <div id="num1"></div>
             <p id="numOperator"></p>
             <p id="num2"></p>
           </div>
@@ -35,7 +35,7 @@
             </div>
             <div  class="btnPlus">
               <div id="multiplicarPlus" class="shadowPlus">
-                <p id="multiplicar">x</p>
+                <p id="multiplicar">*</p>
               </div>
             </div>
           </div>
@@ -79,12 +79,12 @@
             </div>
             <div class="btnPlus">
               <div id="dividirPlus" class="shadowPlus">
-                <p id="dividir">%</p>
+                <p id="dividir">/</p>
               </div>
             </div>
           </div>
           <div class="fourColumn">
-            <div class="btnC">
+            <div id="botonC" class="btnC">
               <div class="shadowC">
                 <p>C</p>
               </div>
@@ -95,8 +95,8 @@
               </div>
             </div>
             <div class="btnPlus">
-              <div class="shadowPlus">
-                <p>=</p>
+              <div id="resultPlus" class="shadowPlus">
+                <p id="result">=</p>
               </div>
             </div>
             <div class="btnPlus">

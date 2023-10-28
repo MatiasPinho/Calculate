@@ -4,7 +4,9 @@
 }
 
 body {
-  background-color: black;
+  background-image: url(img/WyF_2-Xf3boyBe9kSrOmXdMakqwwh3v4lgz1MoMCm0E.webp);
+  background-size: cover;
+  background-position: center;
 }
 
 .boxContainer {
@@ -24,7 +26,7 @@ body {
   height: 450px;
   background-image: radial-gradient(
     circle farthest-corner at 10% 20%,
-    rgb(47, 45, 48) 0%,
+    rgb(48, 68, 109) 0%,
     rgba(4, 0, 4, 1) 90%
   );
   box-shadow: 50px;
@@ -42,7 +44,7 @@ body {
   background-color: #bfcf62;
   opacity: 70%;
   width: 230px;
-  height: 50px;
+  height: 70px;
   border-radius: 10px;
 }
 
@@ -149,6 +151,7 @@ body {
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
   color: white;
   font-size: 20px;
+  padding: 20px;
 }
 
 .fourColumn {
@@ -226,36 +229,27 @@ body {
   box-shadow: -9px -8px 5px -4px rgba(0, 0, 0, 0.75);
 }
 
-
-#num1{
+#num1 {
   display: flex;
   justify-content: center;
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
   color: white;
-  font-size: 13px;
-  
-  
-
+  font-size: 20px;
 }
 
-#numOperator{
+#numOperator {
   display: flex;
   justify-content: center;
   align-items: center;
   margin-top: 3px;
 
   color: white;
-  
-
-  
 }
 
-
-
-#num2{
+#num2 {
   display: flex;
   justify-content: center;
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
   color: white;
-  font-size: 13px;
-   }
+  font-size: 20px;
+}
